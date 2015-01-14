@@ -13,8 +13,10 @@ $ npm install --save kl-parking-spots
 ```js
 var klParkingSpots = require('kl-parking-spots');
 
-klParkingSpots()
-
+klParkingSpots(function(spots){
+  console.log(spots);
+  // => [ { place: 'Sgwang', date: '14/01/2015 11:38:41', spots: '568' }, ...
+});
 ```
 
 
@@ -25,11 +27,13 @@ $ npm install --global kl-parking-spots
 ```
 
 ```sh
-$ kl-parking-spots --help
+$ kl-parking --help
 
   Example
     kl-parking-spots
     
+ =>  PLACE      SPOTS
+     Lot10        468
 ```
 
 
