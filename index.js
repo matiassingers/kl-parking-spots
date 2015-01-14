@@ -6,6 +6,10 @@ var titleCase = require('title-case');
 
 module.exports = function(callback){
   got('http://dbklpgis.my/PGIS_Mall.js', function(err, data){
+    if(err){
+      throw err;
+    }
+
     // Remove useless info from the response
     var parkingSpots = data
       .replace(/;|\'|PGIS_/g, '')
