@@ -32,6 +32,7 @@
     "title-case": "1.1.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "2.1.0",
+    "nock": "0.56.0"
   }
 }
