@@ -16,7 +16,13 @@ function help() {
     '    kl-parking',
     '',
     ' =>  PLACE      SPOTS',
-    '     Lot10        468'
+    '     Sgwang       467',
+    '     Lowyat       634',
+    '     Lot10        461',
+    '     Fahrenheit   283',
+    '     Starhill    1030',
+    '     Pavilion    1207',
+    '     Klcc        1526'
   ].join('\n'));
 }
 
