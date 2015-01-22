@@ -1,4 +1,6 @@
 # kl-parking-spots [![Build Status](http://img.shields.io/travis/matiassingers/kl-parking-spots.svg?style=flat-square)](https://travis-ci.org/matiassingers/kl-parking-spots) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/kl-parking-spots.svg?style=flat-square)](https://gemnasium.com/matiassingers/kl-parking-spots)
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/matiassingers/kl-parking-spots?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 > available parking spots in Kuala Lumpur
 
 ## Install
