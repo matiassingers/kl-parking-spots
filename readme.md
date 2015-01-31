@@ -1,5 +1,5 @@
 # kl-parking-spots [![Build Status](http://img.shields.io/travis/matiassingers/kl-parking-spots.svg?style=flat-square)](https://travis-ci.org/matiassingers/kl-parking-spots) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/kl-parking-spots.svg?style=flat-square)](https://gemnasium.com/matiassingers/kl-parking-spots)
-> available parking spots in Kuala Lumpur
+> available parking spots in Kuala Lumpur, Malaysia
 
 ## Install
 
@@ -15,7 +15,7 @@ var klParkingSpots = require('kl-parking-spots');
 
 klParkingSpots(function(spots){
   console.log(spots);
-  // => [ { place: 'Sgwang', date: '14/01/2015 11:38:41', spots: '568' }, ...
+  // => [ { name: 'Sungei Wang Plaza', datetime: '31/01/2015 21:40:02', lot: '742', type: 'Shopping Mall', ...
 });
 ```
 
@@ -30,16 +30,16 @@ $ npm install --global kl-parking-spots
 $ kl-parking --help
 
   Example
-    kl-parking-spots
+    kl-parking
     
- =>  PLACE      SPOTS
-     Sgwang       467
-     Lowyat       634
-     Lot10        461
-     Fahrenheit   283
-     Starhill    1030
-     Pavilion    1207
-     Klcc        1526
+ =>  NAME               LOT
+     Sungei Wang Plaza  742
+     Plaza Low Yat      590
+     Lot 10             582
+     Fahrenheit88       187
+     Starhill Gallery  1130
+     Pavilion           675
+     KLCC              3589
 ```
 
 
