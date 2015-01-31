@@ -39,9 +39,9 @@ if (argv.indexOf('--version') !== -1) {
 
 klParkingSpots(function(parkingSpots){
   var columns = columnify(parkingSpots, {
-    columns: ['place', 'spots'],
+    columns: ['name', 'lot'],
     config: {
-      spots: { align: 'right' }
+      lot: { align: 'right' }
     }
   });
 
