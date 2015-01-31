@@ -2,39 +2,42 @@
 
 var _ = require('lodash');
 var got = require('got');
+var parseString = require('xml2js').parseString;
 var titleCase = require('title-case');
 
-module.exports = function(callback){
-  got('http://dbklpgis.my/PGIS_Mall.js', function(err, data){
+var test = module.exports = function(callback){
+  got('http://dbklpgis.scadatron.net/dbklpgisd1.xml', function(err, data){
     if(err){
       throw err;
     }
 
-    // Remove useless info from the response
-    var parkingSpots = data
-      .replace(/;|\'|PGIS_/g, '')
-      .trim()
-      .split('\r\n');
+    parseString(data, function(err, data){
+      if(err){
+        throw err;
+      }
 
-    // LoDash ugly chaining code
-    parkingSpots = _(parkingSpots)
-      .map(function(spot){
-        return spot
-          .split('=');
-      })
-      .zipObject()
-      .groupBy(function(value, key){
-        return key.split('_')[0];
-      })
-      .map(function(values, key){
-        return {
-          place: titleCase(key),
-          date: values[0],
-          spots: values[1]
-        };
-      })
-      .value();
+      var parkingSpots = _.map(data.PGIS.MALL, function(object){
+        return _.transform(object, function (result, val, key) {
+          key = key.toLowerCase();
+          val = val[0];
 
-    callback(parkingSpots);
+          if(key === 'lot'){
+            val = parseInt(val, 10);
+          }
+
+          if(key === 'healthy'){
+            val = (val === "1");
+          }
+
+          if(key === 'name'){
+            val = val === 'KLCC' ? val : titleCase(val);
+          }
+
+          result[key] = val;
+        });
+      });
+
+      callback(parkingSpots);
+    })
   });
 };
