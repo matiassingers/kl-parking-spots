@@ -22,10 +22,12 @@ var test = module.exports = function(callback){
           val = val[0];
 
           if(key === 'lot'){
-            val = parseInt(val, 10);
+            // Sometimes the returned value is "OPEN", not sure why
+            val = val === 'OPEN' ? val : parseInt(val, 10);
           }
 
           if(key === 'healthy'){
+            // Parse the healthy property to a boolean
             val = (val === "1");
           }
 
