@@ -5,7 +5,7 @@ var got = require('got');
 var parseString = require('xml2js').parseString;
 var titleCase = require('title-case');
 
-var test = module.exports = function(callback){
+module.exports = function(callback){
   got('http://dbklpgis.scadatron.net/dbklpgisd1.xml', function(err, data){
     if(err){
       throw err;
