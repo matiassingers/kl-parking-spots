@@ -38,4 +38,8 @@ describe('should format the reponse correctly', function(){
     assert.equal(spots[5].state, 'NA');
     assert.equal(spots[0].id, 'M1');
   });
+
+  it('should convert KLCC to correct casing', function() {
+    assert.equal(spots[6].name, 'KLCC');
+  });
 });
