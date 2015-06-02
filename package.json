@@ -1,6 +1,6 @@
 {
   "name": "kl-parking-spots",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "available parking spots in Kuala Lumpur, Malaysia",
   "main": "index.js",
   "scripts": {
