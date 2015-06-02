@@ -29,13 +29,13 @@
   "homepage": "https://github.com/matiassingers/kl-parking-spots",
   "dependencies": {
     "columnify": "1.5.1",
-    "got": "2.7.2",
-    "lodash": "3.6.0",
-    "title-case": "1.1.0",
-    "xml2js": "0.4.6"
+    "got": "3.2.0",
+    "lodash": "3.9.3",
+    "title-case": "1.1.1",
+    "xml2js": "0.4.9"
   },
   "devDependencies": {
-    "mocha": "2.2.4",
-    "nock": "1.5.0"
+    "mocha": "2.2.5",
+    "nock": "2.3.0"
   }
 }
