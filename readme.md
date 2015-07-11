@@ -46,6 +46,10 @@ $ kl-parking --help
 ```
 
 
+## Related
+- [`sg-parking-spots`](https://github.com/matiassingers/sg-parking-spots)
+
+
 ## License
 
 MIT © [Matias Singers](http://mts.io)
