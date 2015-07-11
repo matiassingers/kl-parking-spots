@@ -5,7 +5,7 @@ var pkg = require('./package.json');
 var klParkingSpots = require('./');
 var argv = process.argv.slice(2);
 
-var columnify = require('columnify')
+var columnify = require('columnify');
 
 function help() {
   console.log([
@@ -15,14 +15,14 @@ function help() {
     '  Example',
     '    kl-parking',
     '',
-    ' =>  NAME               LOT',
-    '     Sungei Wang Plaza  742',
-    '     Plaza Low Yat      590',
-    '     Lot 10             582',
-    '     Fahrenheit88       187',
-    '     Starhill Gallery  1130',
-    '     Pavilion           675',
-    '     KLCC              3589'
+    '  =>  NAME               LOT',
+    '      Sungei Wang Plaza  742',
+    '      Plaza Low Yat      590',
+    '      Lot 10             582',
+    '      Fahrenheit88       187',
+    '      Starhill Gallery  1130',
+    '      Pavilion           675',
+    '      KLCC              3589'
   ].join('\n'));
 }
 
